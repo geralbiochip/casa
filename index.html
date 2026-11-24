@@ -79,7 +79,7 @@ a{color:#8a6d3b}
 <section class="cta">
   <div class="wrap">
     <h2>Interessado em participar?</h2>
-    <p>As vagas são limitadas. Para confirmar a presença ou pedir mais informações, envie um e-mail para <a href="mailto:anavalesilva@sapo.pt" style="color:#e8d9bd">anavalesilva@sapo.pt</a>.</p>
+    <p>As vagas são limitadas. Para confirmar a presença ou pedir mais informações, preencha o formulário abaixo.</p>
     <a class="btn" href="#inscricao">Preencher inscrição</a>
   </div>
 </section>
@@ -92,14 +92,12 @@ a{color:#8a6d3b}
     <form id="inscricao-form" class="form" action="https://formsubmit.co/anavalesilva@sapo.pt" method="POST">
       <input type="hidden" name="_subject" value="Nova inscrição na visita guiada — Bairro do Zambujeiro, Loures">
       <input type="hidden" name="_template" value="table">
-      <input type="hidden" name="_captcha" value="false">
-      <input type="hidden" name="_autoresponse" value="Obrigado pelo seu interesse. Recebemos a sua inscrição para a visita guiada à moradia no Bairro do Zambujeiro, zona de Loures. Entraremos em contacto em breve.">
 
       <label for="nome">Nome completo</label>
-      <input type="text" id="nome" name="Nome completo" required>
+      <input type="text" autocomplete="name" id="nome" name="Nome completo" required>
 
       <label for="email">E-mail</label>
-      <input type="email" id="email" name="E-mail" required>
+      <input type="email" autocomplete="email" id="email" name="email" required>
 
       <label for="telefone">Telefone</label>
       <input type="tel" id="telefone" name="Telefone" required>
@@ -117,8 +115,8 @@ a{color:#8a6d3b}
       <label for="mensagem">Mensagem ou questões adicionais</label>
       <textarea id="mensagem" name="Mensagem ou questões adicionais" rows="4"></textarea>
 
+      <p class="form-status">Os dados serão encaminhados para anavalesilva@sapo.pt através do serviço FormSubmit.</p>
       <button type="submit" class="btn">Enviar inscrição</button>
-      <p id="form-status" class="form-status" hidden>Obrigado. A sua inscrição foi enviada. Iremos contactá-lo em breve.</p>
     </form>
 
     <div class="note">
@@ -128,12 +126,5 @@ a{color:#8a6d3b}
 </section>
 
 <footer>Venda direta · Visita guiada · Bairro do Zambujeiro, Loures · Dia 14, às 15:00</footer>
-
-<script>
-document.getElementById('inscricao-form').addEventListener('submit', function(){
-  const status=document.getElementById('form-status');
-  status.hidden=false;
-});
-</script>
 </body>
 </html>
